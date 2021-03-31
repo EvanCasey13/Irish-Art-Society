@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<header>
+	<h1> Irish Art Society</h1>
+	<nav>
+		<ul>
+			<li><i class="fas fa-home"></i> <a href="index.html">Home |</a></li>
+			<li><i class="fas fa-info"></i> <a href="activities.html">Activities |</a></li>
+			<li><i class="fas fa-folder"></i> <a href="gallery.html">Gallery |</a></li>
+			<li><i class="fas fa-calendar-alt"></i> <a href="upcomingevents.html">Upcoming Events |</a></li>
+			<li><i class="fas fa-question"></i> <a href="about.html">About Our Organisation |</a></li>
+		</ul>
+	</nav>
+</header>
+<hr>
+<hr>
+<body>
+	<main>
+		<h3> We have many of the best self portraits of our favourite Artists which we study located here for your enjoyment </h3>
+		<hr>
+		<!-- Code For Java & css that allows the images to be opened in an animated way was obtained on W3SCHOOLS.COM on the how to create Modal Images Section -->
+		<!-- EDGAR DEGAS -->
+		<figure class ="galleryimages">
+			<!-- Trigger the Modal -->
+			<img id="myImg1" src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Edgar_Degas_self_portrait_1855.jpeg" alt="Edgar Degas" >
+			<!-- The Modal -->
+			<div id="myModal" class="modal">
+				<!-- The Close Button -->
+				<span class="close">&times;</span>
+				<!-- Modal Content (The Image) -->
+				<img class="modal-content" id="img01">
+				<!-- Modal Caption (Image Text) -->
+				<div id="caption"></div>
+			</div>
+		</figure>
+		
+		<script>
+			var modal = document.getElementById("myModal");
+     // Get the image and insert it inside the modal 
+     var img = document.getElementById("myImg1");
+     var modalImg = document.getElementById("img01");
+     var captionText = document.getElementById("caption");
+     img.onclick = function(){
+     	modal.style.display = "block";
+     	modalImg.src = this.src;
+     	captionText.innerHTML = this.alt;
+     }
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+    	modal.style.display = "none";
+    }
+</script>
+
+
+<!-- CLAUDE MONET -->
+<figure class ="galleryimages">
+	<img id="myImg2" src="http://img.fruugo.com/product/5/49/70965495_max.jpg" alt="Claude Monet" >
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+		<!-- The Close Button -->
+		<span class="close">&times;</span>
+		<!-- Modal Content (The Image) -->
+		<img class="modal-content" id="img02">
+		<!-- Modal Caption (Image Text) -->
+		<div id="caption"></div>
+	</div>
+</figure>
+<script>
+	var modal = document.getElementById("myModal");
+     // Get the image and insert it inside the modal 
+     var img = document.getElementById("myImg2");
+     var modalImg = document.getElementById("img01");
+     var captionText = document.getElementById("caption");
+     img.onclick = function(){
+     	modal.style.display = "block";
+     	modalImg.src = this.src;
+     	captionText.innerHTML = this.alt;
+     }
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+    	modal.style.display = "none";
+    }
+</script>
+
+
+<!-- PIERRE AUGUSTE RENOIR-->
+<figure class ="galleryimages">
+	<img id="myImg3" src="https://www.passionforpaintings.com/69712/self-portrait-1875-pierre-auguste-renoir.jpg" alt="Pierre Auguste Renoir" >
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+		<!-- The Close Button -->
+		<span class="close">&times;</span>
+		<!-- Modal Content (The Image) -->
+		<img class="modal-content" id="img03">
+		<!-- Modal Caption (Image Text) -->
+		<div id="caption"></div>
+	</div>
+</figure>
+<script>
+	var modal = document.getElementById("myModal");
+     // Get the image and insert it inside the modal 
+     var img = document.getElementById("myImg3");
+     var modalImg = document.getElementById("img01");
+     var captionText = document.getElementById("caption");
+     img.onclick = function(){
+     	modal.style.display = "block";
+     	modalImg.src = this.src;
+     	captionText.innerHTML = this.alt;
+     }
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+    	modal.style.display = "none";
+    }
+</script>
+
+<!-- CARRAVAGIO -->
+<figure class ="galleryimages">
+	<img id="myImg4" src="https://i.pinimg.com/originals/2b/49/f9/2b49f90691422295d085eed92b3ace76.jpg" alt="Carravagio" >
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+		<!-- The Close Button -->
+		<span class="close">&times;</span>
+		<!-- Modal Content (The Image) -->
+		<img class="modal-content" id="img04">
+		<!-- Modal Caption (Image Text) -->
+		<div id="caption"></div>
+	</div>
+</figure>
+<script>
+	var modal = document.getElementById("myModal");
+     // Get the image and insert it inside the modal - use its "alt" text as a caption
+     var img = document.getElementById("myImg4");
+     var modalImg = document.getElementById("img01");
+     var captionText = document.getElementById("caption");
+     img.onclick = function(){
+     	modal.style.display = "block";
+     	modalImg.src = this.src;
+     	captionText.innerHTML = this.alt;
+     }
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+    	modal.style.display = "none";
+    }
+</script>
+
+<figure class ="galleryimages">
+	<img id="myImg6" src="https://www.paulcezanne.org/images/paintings/self-portrait.jpg" alt="Paul Cezanne"> 
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+		<!-- The Close Button -->
+		<span class="close">&times;</span>
+		<!-- Modal Content (The Image) -->
+		<img class="modal-content" id="img06">
+		<!-- Modal Caption (Image Text) -->
+		<div id="caption"></div>
+	</div> 
+</figure>
+<script>
+	var modal = document.getElementById("myModal");
+     // Get the image and insert it inside the modal - use its "alt" text as a caption
+     var img = document.getElementById("myImg6");
+     var modalImg = document.getElementById("img01");
+     var captionText = document.getElementById("caption");
+     img.onclick = function(){
+     	modal.style.display = "block";
+     	modalImg.src = this.src;
+     	captionText.innerHTML = this.alt;
+     }
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+    	modal.style.display = "none";
+    }
+</script>
+
+
+<!-- VINCENT VAN GOGH -->
+
+<figure class ="galleryimages">
+	<img id="myImg5" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project.jpg" alt="Vincent van Gogh" > 
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+		<!-- The Close Button -->
+		<span class="close">&times;</span>
+		<!-- Modal Content (The Image) -->
+		<img class="modal-content" id="img05">
+		<!-- Modal Caption (Image Text) -->
+		<div id="caption"></div>
+	</div> 
+</figure>
+<script>
+	var modal = document.getElementById("myModal");
+     // Get the image and insert it inside the modal - use its "alt" text as a caption
+     var img = document.getElementById("myImg5");
+     var modalImg = document.getElementById("img01");
+     var captionText = document.getElementById("caption");
+     img.onclick = function(){
+     	modal.style.display = "block";
+     	modalImg.src = this.src;
+     	captionText.innerHTML = this.alt;
+     }
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+    	modal.style.display = "none";
+    }
+</script>
+
+</main>
+<footer>
+	<div class ="galleryfooter">
+		<div class ="section"> 
+			©Copyright @ 2019 Irish Art Society
+			<br>
+			Terms of Use & Privacy Policy
+		</div>
+		<div class ="contact">
+			Tel: (353 ) 064 6627334
+			<br>
+			Fax: (353 ) 064 6627350
+			<br>
+		Email: IAsociety@gmail.com</div>
+		<div class="wrapper">
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="activities.html">Activities</a></li>
+					<li><a href="gallery.html">Gallery</a></li>      
+					<li><a href="upcomingevents.html">Upcoming Events</a></li>
+					<li><a href="about.html">About Our Organisation</a></li> 
+				</ul>
+			</nav> 
+		</div>
+	</div>
+</footer>
+</body>
+</html>

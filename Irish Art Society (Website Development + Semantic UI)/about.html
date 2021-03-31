@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<header class = "ui mobile computer sixteen wide column">
+	<br>
+	<nav>
+		<div class="ui mobile computer top attached tabular menu">
+			<h1> Irish Art Society</h1>
+			<ul>
+				<li><i class="fas fa-home"></i> <a class = "active item" href="index.html">Home |</a></li>
+				<li><i class="fas fa-info"></i> <a class = "item" href="activities.html">Activities |</a></li>
+				<li><i class="fas fa-folder"></i> <a class = "item" href="gallery.html">Gallery |</a></li>
+				<li><i class="fas fa-calendar-alt"></i> <a class ="item" href="upcomingevents.html">Upcoming Events |</a></li>
+				<li><i class="fas fa-question"></i> <a class = "item" href="about.html">About Our Organisation |</a></li>
+			</ul>
+		</div>
+	</nav>
+</header>
+<hr>
+<h3 class ="ui centered sixteen wide column">Below you can find information about our Society</h3>
+<hr>
+<body>
+	<main>
+		<div class ="ui grid container">
+			<h4 class ="ui sixteen wide column">About Us :</h4>
+			<div class ="ui sixteen wide column">
+				<Section>
+					<p> 
+						This is a forum for the members of Irish Art Society & those who have a high interest in art to post paintings and dicuss items of interest with other members of the Society. 
+
+						Irish Art Society (IAS) has been in existence for over 50 years.  Membership is by invitation only following submission of a portfolio of recent work and is limited to 70 members.
+
+						The Society hosts an annual exhibition of members' work in addition to tutorials, workshops and demonstrations for its members. 
+
+						Members works are widely represented and  have been exhibited in the RHA, Oireachtas  and The Watercolour Society of Ireland exhibitions.  
+
+						Enquiries to IAsociety@gmail.com
+
+						Please send us some of your images or events that may be of interest to our members and we would be delighted to post them on our Page.  Guidelines for submissions:
+
+						* Maximum three paintings a day
+						* Include dimensions and media
+						* Do not post entire albums
+					</p>
+				</Section>
+			</div>
+			<div class ="ui sixteen wide column">
+				<h4> The role of Culture Ireland :</h4>
+
+				<Section>
+					<p>
+						Culture Ireland is the division of the Department responsible for the promotion of the arts and artists overseas. Culture Ireland creates and supports opportunities for Irish artists and companies to present their work at strategic international showcases, festivals, venues and arts markets and support artists right across the creative spectrum including visual art, theatre, literature, music, dance, opera and film.
+
+					Further information on Culture Ireland and its grant programme is available on</p>
+				</Section>
+			</div>
+			<aside class ="ui eight wide column">
+				<div class="demo2">
+					<h5>Links to Art History Websites</h5>
+					<hr>
+					<p><a href="https://smarthistory.org/" target="_blank">Smart History</a></p>
+					<p><a href="http://www.ubu.com/" target="_blank">Ubu</a></p>
+					<p><a href="https://www.arthistorynews.com/" target="_blank">Art History News</a></p>
+					<p><a href="https://www.wikiart.org/" target="_blank">Wiki Art</a></p>
+					<p><a href="https://www.wga.hu/" target="_blank">Web Gallery of Art</a></p>
+					<p><a href="https://www.thoughtco.com/art-art-history-4132955" target="_blank">ThoughtCo Art History Guide</a></p>
+				</div>
+			</aside>
+		</main>
+	</div>
+	<footer>
+		<div class ="footer">
+			<div class ="section"> 
+				©Copyright @ 2019 Irish Art Society
+				<br>
+				Terms of Use & Privacy Policy
+			</div>
+			<div class ="contact">
+				Tel: (353 ) 064 6627334
+				<br>
+				Fax: (353 ) 064 6627350
+				<br>
+			Email: IAsociety@gmail.com</div>
+			<div class="wrapper">
+				<div id="dimmerPage" class="ui page dimmer">
+					<div class="content">
+						Welcome to the About section of our Website
+					</div>
+
+					<div class="ui orange button" onclick="hideDimmer();">
+						Close
+					</div>
+				</div>
+
+				<p>
+					<div class="ui orange button" onclick="showDimmer();">Press me</div>
+				</p>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="activities.html">Activities</a></li>
+						<li><a href="gallery.html">Gallery</a></li>      
+						<li><a href="upcomingevents.html">Upcoming Events</a></li>
+						<li><a href="about.html">About Our Organisation</a></li> 
+					</ul>
+				</nav> 
+			</div>
+		</div>
+	</footer>
+	<script
+	src="https://code.jquery.com/jquery-3.4.1.min.js"
+	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	crossorigin="anonymous"></script>
+	<script  src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.js"></script>
+	<script>
+		function showDimmer() {
+			$('#dimmerPage').dimmer('show');
+		}
+
+		function hideDimmer() {
+			$('#dimmerPage').dimmer('hide');
+		}
+	</script>
+</body>
+</html>

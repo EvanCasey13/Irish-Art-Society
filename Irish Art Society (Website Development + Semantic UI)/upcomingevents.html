@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<header class = "ui mobile computer sixteen wide column">
+	<br>
+	<nav>
+		<div class="ui mobile computer top attached tabular menu">
+			<h1> Irish Art Society</h1>
+			<ul>
+				<li><i class="fas fa-home"></i> <a class = "active item" href="index.html">Home |</a></li>
+				<li><i class="fas fa-info"></i> <a class = "item" href="activities.html">Activities |</a></li>
+				<li><i class="fas fa-folder"></i> <a class = "item" href="gallery.html">Gallery |</a></li>
+				<li><i class="fas fa-calendar-alt"></i> <a class ="item" href="upcomingevents.html">Upcoming Events |</a></li>
+				<li><i class="fas fa-question"></i> <a class = "item" href="about.html">About Our Organisation |</a></li>
+			</ul>
+		</div>
+	</nav>
+</header>
+<hr>
+<hr>
+<body>
+	<main>
+		
+		<h3> Here you can see a list of our Upcoming Events </h3>
+		<hr>
+		<h2>Upcoming Events</h2>
+		
+		<table class ="ui striped selectable celled compact table ">
+			<tr>
+				<th>Event Name</th>
+				<th>Event Location</th>
+				<th>Date</th>
+			</tr>
+			<tr>
+				<td>The National Gallery of Ireland</td>
+				<td>Merrion Square, Dublin</td>
+				<td>12/12/2019</td>
+			</tr>
+			<tr>
+				<td>2019 People's Art Exhibitions</td>
+				<td>St. Stephen's Green Dublin Ireland</td>
+				<td>01/12/2019</td>
+			</tr>
+			<tr>
+				<td>Walker Art Gallery</td>
+				<td>Liverpool</td>
+				<td>23/01/2020</td>
+			</tr>
+			<tr>
+				<td>Royal Academy of Arts</td>
+				<td>London</td>
+				<td>15/03/2020</td>
+			</tr>
+			<tr>
+				<td>The Louvre</td>
+				<td>Rue de Rivoli, Paris, France</td>
+				<td>30/06/2020</td>
+			</tr>
+			<tr>
+				<td>Alte Nationalgalerie</td>
+				<td>Bodestraße, Berlin, Germany</td>
+				<td>25/08/2020</td>
+			</tr>
+			<tr>
+				<td>Academy of Florence Art Gallery</td>
+				<td> Via Ricasoli, Florence, Italy</td>
+				<td>18/10/2020</td>
+			</tr>
+			<tr>
+				<td>Academy Gallery in Venice</td>
+				<td>Campo della Carita, Venice, Italy</td>
+				<td>29/11/2020</td>
+			</tr>
+		</table>
+		<div class="ui four wide column">
+			<form action="process.html" method="get" id = "contact" class="ui form" role="form">
+				<p> Application form for those who wish to attend certain trips</p>
+				<div class = "inline field">
+					<label for="contactname" class="three wide field">Contact Name :</label>
+					<input type="text" name="contactname" pattern = "^[A-Z][a-z]+( [A-Z][a-z]+)*" autofocus required title="Please fill in your name with an Capital letter and a optional second name" id="contactname" class="six wide field">
+				</div>
+
+				<div class = "inline field">
+					<label for="Telephone Number" class="three wide field">Telephone Number</label>
+					<input type="number" name="Telephone Number" required pattern = "^(\(\d{3}\)|\d{3})-?\d{6,9}$" title="Please enter a valid phone number with at least 9 digits" id="telephonenumber" class="six wide field">
+				</div>
+
+				<div class = "inline field">
+					<label for="Email address" class="three wide field">Email address</label>
+					<input type="email" name="email" required pattern = "^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$" title=" Please enter a valid email address" id="email" class="six wide field">
+				</div>
+				<div class ="inline field">
+					<label for = "myBrowser" class ="three wide field">Choose a Payment Method from this list:</label>
+					<input type = "text" list="browsers" name="myBrowser" id = "myBrowser" class ="six wide field">
+					<datalist id="browsers">
+						<option value="Visa debit"></option>
+						<option value="Visa credit"></option>
+						<option value="Paypal"></option>
+						<option value="Cash"></option>
+					</div>
+				</datalist>
+
+				<div class ="inline field">
+					<label for = "region" class ="three wide field" >What trips do you wish to attend?</label>
+
+					<select name="region" id="region" class ="six wide field" multiple>
+						<option value="sw">The National Gallery of Ireland</option>
+						<option value="se">2019 People's Art Exhibitions</option>
+						<option value="se">Walker Art Gallery</option>
+						<option value="se">Royal Academy of Arts</option>
+						<option value="se">The Louvre</option>
+						<option value="se">Alte Nationalgalerie</option>
+						<option value="se">Academy of Florence Art Gallery</option>
+						<option value="se">Academy Gallery in Venice</option>
+					</select>
+
+					<div class ="ui four wide column">
+						
+	                
+					   
+						<br>
+						<input type="checkbox" name="use" id="use" value="subscribe" checked="checked" style="float:left">
+						<label for = "use">I am happy for this event to be publicized outside and beyond IAS.com, where possible</label>
+						<br>
+						<button class="ui blue button" type="submit">Apply </button>
+						<button class="ui blue button" type="reset">Clear</button>
+					</div>
+				</div>
+			</form>
+		</main>
+
+		<footer>	
+			<div class ="galleryfooter">
+				<div class ="section"> 
+					©Copyright @ 2019 Irish Art Society
+					<br>
+					Terms of Use & Privacy Policy
+				</div>
+				<div class ="contact">
+					Tel: (353 ) 064 6627334
+					<br>
+					Fax: (353 ) 064 6627350
+					<br>
+				Email: IAsociety@gmail.com</div>
+				<div class="wrapper">
+					<nav>
+						<div id="dimmerPage" class="ui page dimmer">
+							<div class="content">
+								Welcome to the Upcoming events page of the Irish Art Society
+							</div>
+
+							<div class="ui orange button" onclick="hideDimmer();">
+								Close
+							</div>
+						</div>
+
+						<p>
+							<div class="ui orange button" onclick="showDimmer();">Press me</div>
+						</p>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="activities.html">Activities</a></li>
+							<li><a href="gallery.html">Gallery</a></li>      
+							<li><a href="upcomingevents.html">Upcoming Events</a></li>
+							<li><a href="about.html">About Our Organisation</a></li> 
+						</ul>
+					</nav> 
+				</div>
+			</div>
+			
+		</footer>
+		<script
+		src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous"></script>
+		<script  src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.js"></script>
+		<script>
+			function showDimmer() {
+				$('#dimmerPage').dimmer('show');
+			}
+
+			function hideDimmer() {
+				$('#dimmerPage').dimmer('hide');
+			}
+		</script>
+	</body>
+	</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<header class = "ui mobile computer sixteen wide column">
+	<br>
+	<nav>
+		<div class="ui mobile computer top attached tabular menu">
+			<h1> Irish Art Society</h1>
+			<ul>
+				<li><i class="fas fa-home"></i> <a class = "active item" href="index.html">Home |</a></li>
+				<li><i class="fas fa-info"></i> <a class = "item" href="activities.html">Activities |</a></li>
+				<li><i class="fas fa-folder"></i> <a class = "item" href="gallery.html">Gallery |</a></li>
+				<li><i class="fas fa-calendar-alt"></i> <a class ="item" href="upcomingevents.html">Upcoming Events |</a></li>
+				<li><i class="fas fa-question"></i> <a class = "item" href="about.html">About Our Organisation |</a></li>
+			</ul>
+		</div>
+	</nav>
+</header>
+<body>
+	<main>
+		<div class ="ui grid container">
+			<div class ="ui mobile computer sixteen centered wide column">
+				<h3>Below are a list of the Activities that take place at our Organisation on a day-to-day and biweekly basis</h3>
+			</div>
+		</div>
+		<hr>
+		<h4>Activities : </h4>
+		<div class ="ui mobile computer sixteen wide column">
+			<ul class ="col">
+				<li> Lecture & Study of Various Paintings held every <span class ="days">Monday</span> at 5:30pm</li>
+				<br>
+				<li> Open library containing various books with excellent information on many eras of Painting for members</li>
+				<br>
+				<li> Every <span class = "days">Wednesday </span>the art society becomes a place for members to hone their skills, develop their techniques and collaborate with other Artists</li>
+				<br>
+				<li> Annual Arts Festival held twice a year at Christmas and Summer</li>
+				<br>
+				<li> Every <span class = "days">Saturday</span> a meeting is held at 7:00pm to discuss any ideas & problems that members or staff may have</li>
+				<br>
+				<li>Our art club meets at least once a month, with more meetings if a project requires it.</li>
+			</ul>
+		</div>
+		<br>
+		<br>
+		<h4> Why you should become involved in Our Activities : </h4>
+	</div>
+	<ol class ="col">
+		<div class = "ui container">
+			<div class = "ui mobile computer sixteen wide column">
+				<li>Art influences society by changing opinions, instilling values and translating experiences across space and time. Research has shown art affects the fundamental sense of self. Painting, sculpture, music, literature and the other arts are often considered to be the repository of a society's collective memory.</li>
+				<br>
+				<li>The arts bring us joy, help us express our values, and build bridges between cultures. The arts are also a fundamental component of a healthy community—strengthening them socially, educationally, and economically—benefits that persist even in difficult social and economic times.</li>
+				<br>
+				<li>Art expresses the non-verbal. And despite our heavy emphasis on the verbal and written, there’s a vast realm of human experience that can only be understood and supported without words.</li>
+				<br>
+			</div>
+		</div>
+	</ol>
+	
+	<div class ="twitter">
+		<aside>
+			<a class="twitter-timeline" data-lang="en" data-width="550" data-height="590" data-dnt="true" data-theme="dark" data-link-color="#E95F28" href="https://twitter.com/TheNewPainting?ref_src=twsrc%5Etfw">Tweets by TheNewPainting</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</aside>
+	</div>
+</main>
+<footer>
+	<div class ="ui mobile computer column">
+		<div class ="footer">
+			<div class ="section"> 
+				©Copyright @ 2019 Irish Art Society
+				<br>
+				Terms of Use & Privacy Policy
+			</div>
+			<div class ="contact">
+				Tel: (353 ) 064 6627334
+				<br>
+				Fax: (353 ) 064 6627350
+				<br>
+			Email: IAsociety@gmail.com</div>
+			<div class="wrapper">
+				<div id="dimmerPage" class="ui page dimmer">
+					<div class="content">
+						Welcome to the Activites section of our Website
+					</div>
+
+					<div class="ui orange button" onclick="hideDimmer();">
+						Close
+					</div>
+				</div>
+
+				<p>
+					<div class="ui orange button" onclick="showDimmer();">Press me</div>
+				</p>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="activities.html">Activities</a></li>
+						<li><a href="gallery.html">Gallery</a></li>      
+						<li><a href="upcomingevents.html">Upcoming Events</a></li>
+						<li><a href="about.html">About Our Organisation</a></li> 
+					</ul>
+				</nav> 
+			</div>
+		</div>
+	</div>
+</footer>
+<script
+src="https://code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+crossorigin="anonymous"></script>
+<script  src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.js"></script>
+<script>
+	function showDimmer() {
+		$('#dimmerPage').dimmer('show');
+	}
+
+	function hideDimmer() {
+		$('#dimmerPage').dimmer('hide');
+	}
+</script>
+</body>
+</html>
