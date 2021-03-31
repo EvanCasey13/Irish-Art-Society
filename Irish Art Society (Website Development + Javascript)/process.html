@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+  <link rel="stylesheet" href="css/component.css">
+  <link rel="stylesheet" href="css/mouseparallax.css">
+  <link rel="stylesheet" href="css/pace-theme-flash.css">
+  <link rel="stylesheet" href="css/footerstyle.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Irish Art Society</title>
+</head>
+
+<body class="cbp-spmenu-push">
+
+  <div id="background" class="mouse-bg"></div>
+
+  <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+
+    <h3>Irish Art Society</h3>
+
+    <a class = "active item" href="index.html">Home |</a>
+    <a class = "item" href="activities.html">Activities |</a>
+    <a class = "item" href="gallery.html">Gallery |</a>
+    <a class ="item" href="upcomingevents.html">Upcoming Events |</a>
+    <a class = "item" href="about.html">About |</a>
+  </nav>
+
+  <div id = "content" class = "ui row">
+    <header class = "ui mobile computer sixteen wide column">
+      <br>
+      <nav>
+        <div class="ui mobile computer top attached tabular menu">
+          <h1> Irish Art Society</h1>
+          <ul>
+            <li><i class="fas fa-home"></i> <a class = "active item" href="index.html">Home |</a></li>
+            <li><i class="fas fa-info"></i> <a class = "item" href="activities.html">Activities |</a></li>
+            <li><i class="fas fa-folder"></i> <a class = "item" href="gallery.html">Gallery |</a></li>
+            <li><i class="fas fa-calendar-alt"></i> <a class ="item" href="upcomingevents.html">Upcoming Events |</a></li>
+            <li><i class="fas fa-question"></i> <a class = "item" href="about.html">About |</a></li>
+            <li><div class="ui white button" id="showLeftPush"><i class="fas fa-bars"></i></button></li></div>
+          </ul>
+        </div>
+      </nav>
+      <main class="thirteen wide column">
+        <h2>Form Processed</h2>
+        <h2>Your form has been successfully completed</h2>
+      </main>
+    </div>
+    <footer>
+      <div class ="section"> 
+        ©Copyright @ 2019 Irish Art Society
+        <br>
+        Terms of Use & Privacy Policy
+      </div>
+      <div class ="contact">
+        Tel: (353 ) 064 6627334
+        <br>
+        Fax: (353 ) 064 6627350
+        <br>
+      Email: IAsociety@gmail.com</div>
+      <div class="wrapper">
+        <div class="maxi">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="activities.html">Activities</a></li>
+            <li><a href="gallery.html">Gallery</a></li>      
+            <li><a href="upcomingevents.html">Upcoming Events</a></li>
+            <li><a href="about.html">About</a></li> 
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/classie.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/h5Validate/0.9.0/jquery.h5validate.min.js"></script>
+    <script src="js/mouse.parallax.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/pace.js"></script>
+
+<script>//sidemenu left push 
+var menuLeft = document.getElementById('cbp-spmenu-s1' ),
+showLeftPush = document.getElementById( 'showLeftPush' ),
+body = document.body;
+var menuLeft = document.getElementById('cbp-spmenu-s1' ),
+body = document.body;
+showLeftPush.onclick = function() {
+  classie.toggle( this, 'active' );
+  classie.toggle( body, 'cbp-spmenu-push-toright' );
+  classie.toggle( menuLeft, 'cbp-spmenu-open' );
+  disableOther( 'showLeftPush' );
+};
+
+function disableOther( button ) {
+  if( button !== 'showLeftPush' ) {
+    classie.toggle( showLeftPush, 'disabled' );
+  }
+}
+</script>
+
+<script>//Mouse parallax background image move factor 
+$(document).ready(function() {
+  $('#background').mouseParallax({ moveFactor: 1.5 });
+  $('body').height(0);
+});
+</script>
+
+<script>
+  paceOptions = {
+    catchupTime: 100,
+    initialRate: .03,
+    minTime: 250,
+    ghostTime: 100,
+    maxProgressPerFrame: 20,
+    easeFactor: 1.25,
+    startOnPageLoad:true,
+    restartOnPushState:true,
+    restartOnRequestAfter: 500,
+    target:'body',
+    elements: {
+      checkInterval: 100,
+      selectors: ['body']
+    },
+    eventLag: {
+      minSamples: 10,
+      sampleCount: 3,
+      lagThreshold: 3
+    },
+    ajax: {
+      trackMethods: ['GET'],
+      trackWebSockets:true,
+      ignoreURLs: []
+    }
+  }
+</script>
+
+<script>//Jquery script to detect scroll event and reveal footer when you scroll down the page
+$(window).scroll(function() {
+  $("body").removeClass("scrolling");
+  if($(window).scrollTop() + $(window).height() > ($(document).height() -600) ) {
+  //you are at bottom
+  $("body").addClass("scrolling");
+}});
+</script>
+
+</body>
+</html>

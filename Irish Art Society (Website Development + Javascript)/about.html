@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+	<link rel="stylesheet" href="css/component.css">
+	<link rel="stylesheet" href="css/mouseparallax.css">
+	<link rel="stylesheet" href="css/pace-theme-flash.css">
+	<link rel="stylesheet" href="css/footerstyle.css">
+	<link rel="stylesheet" href="css/responsive-tabs.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<header class = "ui mobile computer sixteen wide column">
+	<br>
+	<nav>
+
+		<div class="ui mobile computer top attached tabular menu">
+			<h1> Irish Art Society </h1>
+			<ul>
+				<li><i class="fas fa-home"></i> <a class = "item" href="index.html">Home |</a></li>
+				<li><i class="fas fa-info"></i> <a class = "item" href="activities.html">Activities |</a></li>
+				<li><i class="fas fa-folder"></i> <a class = "item" href="gallery.html">Gallery |</a></li>
+				<li><i class="fas fa-calendar-alt"></i> <a class ="item" href="upcomingevents.html">Upcoming Events |</a></li>
+				<li><i class="fas fa-question"></i> <a class = "active item" href="about.html">About |</a></li> 
+				<li><div class="ui white button" id="showLeftPush"><i class="fas fa-bars"></i></button></li></div>
+			</ul>
+		</div>
+	</nav>
+</header>
+
+<body class="cbp-spmenu-push">
+
+	<div id="horizontalTab">
+		<ul>
+			<li><a href="#tab-1">Responsive Tab & Accordion plugin</a></li>
+			<li><a href="#tab-2">J Gallery</a></li>
+			<li><a href="#tab-3">Responsive footer</a></li>
+			<li><a href="#tab-4">Side bar</a></li>
+		</ul>
+		<div id="tab-1">
+			<br>
+			<p class = "ui mobile computer sixteen wide column"> Responsive Tabs is a lightweight and simple jQuery plugin for responsive tabbed interface that will transform to an accordion on window size change. </p>
+			<h4> 1. Include jQuery library and jQuery Responsive Tabs Plugin on the web page & css file</h4>
+			<p class = "ui mobile computer sixteen wide column">
+				script src="/path/to/cdn/jquery.min.js"> /script
+				<br>
+				script src="/path/to/cdn/jquery.responsiveTabs.js"> /script
+				<br>
+				link rel="stylesheet" href="css/responsive-tabs.css" 
+			</p>
+			<h4>2. Create the html for the tab navigation & tabbed content. </h4>
+			<p class = "ui mobile computer sixteen wide column">
+				div id="horizontalTab"
+				<br>
+				ul
+				<br>
+				li a href="#tab-1">Responsive Tab-1 /a /li
+				<br>
+				li a href="#tab-2">Responsive Tab-2 /a /li
+				<br>
+				li a href="#tab-3">Responsive Tab-3 /a /li
+				<br>
+				/ul
+				<br>
+				div id="tab-1"
+				<br>
+				p ... /p
+				<br>
+				/div
+				<br>
+				div id="tab-2"
+				<br>
+				p ... /p
+				<br>
+				/div
+			</p>
+			<h4> 3. Link to plugin site</h4>
+			<p>
+				<a class = "active item" target="_blank" href="https://www.jqueryscript.net/layout/Lightweight-jQuery-Responsive-Tabs-Accordion-Plugin-Responsive-Tabs.html"> | Responsive Tab Download |
+				</a>
+			</p>
+		</div>
+		<div id="tab-2">
+			<h4> 1. Add link to jGallery on your webpage</h4>
+			<p class = "ui mobile computer sixteen wide column"> script type="text/javascript" src="js/jgallery.min.js?v=2.2.1" /script</p>
+			<h4> 2. Create your gallery</h4>
+			<p class = "ui mobile computer sixteen wide column">
+				div id="gallery"
+				<br>
+				/div
+				<br>
+				script type="text/javascript"
+				<br>
+				document.querySelector('#gallery').appendChild(JGallery.create([{
+				<br>
+				title: 'Images',
+				<br>
+				items: [
+				<br>
+				{
+					<br>
+					url: 'images/large/1.jpg',
+					<br>
+					thumbUrl: 'images/thumbs/1.jpg',
+					<br>
+					title: 'Photo1',
+					<br>
+					hash: 'photo-1'
+					<br>
+				},
+				<br>
+				{
+					url: 'images/large/2.jpg',
+					<br>
+					thumbUrl: 'images/thumbs/2.jpg',
+					<br>
+					title: 'Photo2',
+					<br>
+					hash: 'photo-2'
+					<br>
+				},
+				]
+			}, {
+			<br>
+		}]).getElement());
+		<br>
+		/script
+	</p>
+
+	<h4> 3. Link to plugin site</h4>
+	<p class = "ui mobile computer sixteen wide column">
+		<a class = "active item" target="_blank" href="http://jgallery.jakubkowalczyk.pl/"> | J Gallery Download |
+		</a>
+	</p>
+</div>
+<div id="tab-3">
+	<h4> 1.Create a footer section for your website.</h4>
+	<p class = "ui mobile computer sixteen wide column"> 
+		footer
+		<br>
+		div class="mini">Footer /div
+		<br>
+		div class="maxi"
+		<br>
+		ul
+		<br>
+		li a href="">Footer Link 1 /a /li
+		<br>
+		li a href="">Footer Link 2 /a /li
+		<br>
+		li a href="">Footer Link 3 /a /li
+		<br>
+		/ul
+		<br>
+		/div
+		<br>
+		/footer	
+
+	</p>
+
+	<h4> 2.The jQuery script to detect the scroll event and reveal the bigger footer when you scroll down the web page.</h4>
+	<p class = "ui mobile computer sixteen wide column">
+		$(window).scroll(function() {
+		<br>
+		$("body").removeClass("scrolling");
+		<br>
+		if($(window).scrollTop() + $(window).height() > ($(document).height() -600) ) {
+		<br>
+		//you are at bottom
+		<br>
+		$("body").addClass("scrolling");
+		<br>
+	}});
+</p>
+
+<h4> 3. Link to plugin site</h4>
+<p class = "ui mobile computer sixteen wide column">
+	<a class = "active item" target="_blank" href="https://www.jqueryscript.net/other/sticky-expanding-footer.html"> | Responsive footer Download |
+	</a>
+</p>
+</div>
+
+<div id="tab-4">
+	<h4> 1. Create a side menu </h4>
+	<p class = "ui mobile computer sixteen wide column">
+		nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+		<br>
+		a class = "active item" href="index.html">Home | /a>
+		<br>
+		a class = "item" href="activities.html">Activities | /a>
+		<br>
+		a class = "item" href="gallery.html">Gallery | /a>
+		<br>
+		a class ="item" href="upcomingevents.html">Upcoming Events | /a>
+		<br>
+		a class = "item" href="about.html">About Our Organisation | /a>
+		<br>
+		/nav>
+	</p>
+
+	<h4> 2. Create a button to trigger/close the sliding effect</h4>
+	<p class = "ui mobile computer sixteen wide column">
+		button id="showLeft">Show/Hide Left Slide Menu /button
+	</p>
+
+	<h4> 3. The javascript </h4>
+	<p class = "ui mobile computer sixteen wide column">
+		var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+		<br>
+		body = document.body;
+		<br>
+		showLeft.onclick = function() {
+		<br>
+		classie.toggle( this, 'active' );
+		<br>
+		classie.toggle( menuLeft, 'cbp-spmenu-open' );
+		<br>
+		disableOther( 'showLeft' );
+		<br>
+	};
+	<br>
+	function disableOther( button ) {
+	<br>
+	if( button !== 'showLeft' ) {
+	<br>
+	classie.toggle( showLeft, 'disabled' );
+}
+}
+</p>
+
+<h4> 3. Link to plugin site</h4>
+<p class = "ui mobile computer sixteen wide column">
+	<a class = "active item" target="_blank" href="https://www.jqueryscript.net/menu/Cool-Animated-Side-Menus-with-Sliding-Pushing-Effects.html"> | SideBar Download |
+	</a>
+</p>
+</div>
+</div>
+</div>
+
+<div id="background" class="mouse-bg"></div>
+
+<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+
+	<h3>Irish Art Society</h3>
+
+	<a class = "active item" href="index.html">Home | </a>
+	<a class = "item" href="activities.html">Activities |</a>
+	<a class = "item" href="gallery.html">Gallery | </a>
+	<a class ="item" href="upcomingevents.html">Upcoming Events |</a>
+	<a class = "item" href="about.html">About |</a>
+</nav>
+
+<footer>
+	<div class ="section"> 
+		©Copyright @ 2019 Irish Art Society
+		<br>
+		Terms of Use & Privacy Policy
+	</div>
+	<div class ="contact">
+		Tel: (353 ) 064 6627334
+		<br>
+		Fax: (353 ) 064 6627350
+		<br>
+	Email: IAsociety@gmail.com</div>
+	<div class="wrapper">
+		<div class="maxi">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="activities.html">Activities</a></li>
+				<li><a href="gallery.html">Gallery</a></li>      
+				<li><a href="upcomingevents.html">Upcoming Events</a></li>
+				<li><a href="about.html">About</a></li> 
+			</ul>
+		</div>
+	</div>
+</footer>
+
+<script src="js/classie.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="js/mouse.parallax.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/jquery.responsiveTabs.js"></script>
+<script src="js/pace.js"></script>
+
+<script>//sidemenu left push 
+var menuLeft = document.getElementById('cbp-spmenu-s1' ),
+showLeftPush = document.getElementById( 'showLeftPush' ),
+body = document.body;
+var menuLeft = document.getElementById('cbp-spmenu-s1' ),
+body = document.body;
+showLeftPush.onclick = function() {
+	classie.toggle( this, 'active' );
+	classie.toggle( body, 'cbp-spmenu-push-toright' );
+	classie.toggle( menuLeft, 'cbp-spmenu-open' );
+	disableOther( 'showLeftPush' );
+};
+
+function disableOther( button ) {
+	if( button !== 'showLeftPush' ) {
+		classie.toggle( showLeftPush, 'disabled' );
+	}
+}
+</script>
+
+<script>//Mouse parallax background image move factor 
+$(document).ready(function() {
+	$('#background').mouseParallax({ moveFactor: 1.5 });
+	$('body').height(0);
+});
+</script>
+
+<script>
+	paceOptions = {
+		catchupTime: 100,
+		initialRate: .03,
+		minTime: 250,
+		ghostTime: 100,
+		maxProgressPerFrame: 20,
+		easeFactor: 1.25,
+		startOnPageLoad:true,
+		restartOnPushState:true,
+		restartOnRequestAfter: 500,
+		target:'body',
+		elements: {
+			checkInterval: 100,
+			selectors: ['body']
+		},
+		eventLag: {
+			minSamples: 10,
+			sampleCount: 3,
+			lagThreshold: 3
+		},
+		ajax: {
+			trackMethods: ['GET'],
+			trackWebSockets:true,
+			ignoreURLs: []
+		}
+	}
+</script>
+
+<script>//Jquery script to detect scroll event and reveal footer when you scroll down the page
+$(window).scroll(function() {
+	$("body").removeClass("scrolling");
+	if($(window).scrollTop() + $(window).height() > ($(document).height() -600) ) {
+  //you are at bottom
+  $("body").addClass("scrolling");
+}});
+</script>
+
+<script>
+	$(function(){
+		$('#horizontalTab').responsiveTabs({
+
+    // Start with the panels collapsed if the view is currently accordion based
+    startCollapsed: 'accordion', 
+
+    // Tabs can be collapsed
+    collapsible: true, 
+
+    // Tabs auto rotate
+    rotate: false 
+    
+});
+	});
+</script>
+
+<script>//plugin options
+	// called after a tab is selected
+	active: null,
+
+// specify the event that activates a tab
+event: 'click',
+
+// An array with zero based integers that define the tabs that should be disabled
+disabled: [],
+
+// If set to 'true' the panels are collapsible. 
+// 'tabs', 'accordion', true or false
+collapsible: 'accordion',
+
+// Defines if the first panel on load starts collapsed or not. 
+// 'tabs', 'accordion', true or false
+startCollapsed: false,
+
+// auto rotate the tabs
+rotate: false,
+
+// the setting of a reference to the selected tab in the URL hash.
+setHash: false,
+
+// enables the animation of the panels
+// 'default', 'fade' or 'slide'
+animation: 'default',
+
+// queues the animation
+// e.g. true, false, 'accordion', 'tabs'
+animationQueue: false,
+
+// animation duration
+duration: 500,
+
+// makes the height auto adapt to the content
+fluidHeight: true,
+
+// auto scroll to the accordion panel
+scrollToAccordion: false,
+
+// enables scroll to accordion on load
+scrollToAccordionOnLoad: true,
+
+// enables auto scroll to the accordion panel
+scrollToAccordionOffset: 0,
+
+// accordion tab element
+accordionTabElement: '<div></div>',
+
+// selects a different container element for the navigation
+navigationContainer: '',
+
+// called after a tab is clicked
+click: function(e, tab){},
+
+// An 0 based integer that defines the initial opened tab on load.
+activate: function(e, tab){},
+
+// called after a tab is deactivated
+deactivate: function(e, tab){},
+
+// called after the plugin has been loaded
+load: function(e, firstTab){},
+
+// called after the plugin switches from state
+activateState: function(){},
+
+// default CSS classes
+classes: {
+	stateDefault: 'r-tabs-state-default',
+	stateActive: 'r-tabs-state-active',
+	stateDisabled: 'r-tabs-state-disabled',
+	stateExcluded: 'r-tabs-state-excluded',
+	container: 'r-tabs',
+	ul: 'r-tabs-nav',
+	tab: 'r-tabs-tab',
+	anchor: 'r-tabs-anchor',
+	panel: 'r-tabs-panel',
+	accordionTitle: 'r-tabs-accordion-title'
+}
+</script>
+
+<script>// API Methods
+	// opens tab 3
+	$('#horizontalTab').responsiveTabs('activate', 2); 
+
+// closes tab 3
+$('#horizontalTab').responsiveTabs('deactivate', 2); 
+
+// enables tab 3
+$('#horizontalTab').responsiveTabs('enable', 2); 
+
+// disables tab 3
+$('#horizontalTab').responsiveTabs('disable', 2); 
+
+// starts the rotatrion of the tab
+$('#horizontalTab').responsiveTabs('startRotation', 1000); 
+</script>
+
+<script>//Event handlers
+$('#horizontalTab').on('tabs-load', function(e){
+  // do something
+})
+
+$('#horizontalTab').on('tabs-activate', function(e, activeTab){
+  // do something
+})
+
+$('#horizontalTab').on('tabs-deactivate', function(e, deactiveTab){
+  // do something
+})
+
+$('#horizontalTab').on('tabs-activate-state', function(e, oldState, newState){
+  // do something
+})
+</script>
+</body>
+</html>

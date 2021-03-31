@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+	<link rel="stylesheet" href="css/component.css">
+	<link rel="stylesheet" href="css/responsiveslides.css">
+	<link rel="stylesheet" href="css/mouseparallax.css">
+	<link rel="stylesheet" href="css/pace-theme-flash.css">
+	<link rel="stylesheet" href="css/footerstyle.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<header class = "ui mobile computer sixteen wide column">
+	<br>
+	<nav>
+
+		<div class="ui mobile computer top attached tabular menu">
+			<h1> Irish Art Society </h1>
+			<ul>
+				<li><i class="fas fa-home"></i> <a class = "active item" href="index.html">Home |</a></li>
+				<li><i class="fas fa-info"></i> <a class = "item" href="activities.html">Activities |</a></li>
+				<li><i class="fas fa-folder"></i> <a class = "item" href="gallery.html">Gallery |</a></li>
+				<li><i class="fas fa-calendar-alt"></i> <a class ="item" href="upcomingevents.html">Upcoming Events |</a></li>
+				<li><i class="fas fa-question"></i> <a class = "item" href="about.html">About |</a></li> 
+				<li><div class="ui white button" id="showLeftPush"><i class="fas fa-bars"></i></button></li></div>
+			</ul>
+		</div>
+	</nav>
+</header>
+
+
+<body class="cbp-spmenu-push">
+
+	<main>
+		<article>
+			<div class ="ui grid container">
+				<p class = "ui mobile computer sixteen wide column">
+					<strong>The Irish Art Society is an important community in visual arts in Ireland which seeks to preserve and appreciate Irish Art and Art from different periods in Western Art History.</strong>
+				</p>
+			</div>
+			
+			<hr>
+		</article>
+		<section class ="ui mobile computer sixteen wide column">
+			Us at The Irish Art Society are always looking for new members with an enriched passion & appreciation for Irish Art and Art from other periods of History and as a result we have dropped the price of our membership to half at just thirty euro for three months membership. You can find our contact information in the About Our Organisation tab located above where you can get in touch with us to setup your membership with us. We hope to hear from you all very soon.
+			<div class ="President"> - President William Ashford </div>
+		</section>
+
+		<body>
+				<ol class ="index">
+				<script id="exercise1" type="text/x-handlebars-template">
+					{{#each info}}
+					<div class ="ui mobile computer sixteen wide column"><blockquote><strong> {{quotes}} </strong><div class = "italic"> {{name}} </div></blockquote></div>
+					{{/each}}
+
+				</script>
+			</ol>
+			
+		</main>
+
+		<div id="placeholder"></div>
+
+		<ul class="rslides">
+			<li><img src="images/san1.jpg" alt=""></li>
+			<li><img src="images/ship1.jpg" alt=""></li>
+			<li><img src="images/degas2.jpg" alt=""></li>
+			<li><img src="images/monet2.jpg" alt=""></li>
+			<li><img src="images/tree1.jpg" alt=""></li>
+			<li><img src="images/cez1.jpg" alt=""></li>
+			<li><img src="images/renoir1.jpg" alt=""></li>
+			<li><img src="images/ren2.jpg" alt=""></li>
+		</ul>
+
+		<div id="background" class="mouse-bg"></div>
+
+		<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+
+			<h3>Irish Art Society</h3>
+
+			<a class = "active item" href="index.html">Home |</a>
+			<a class = "item" href="activities.html">Activities |</a>
+			<a class = "item" href="gallery.html">Gallery |</a>
+			<a class ="item" href="upcomingevents.html">Upcoming Events |</a>
+			<a class = "item" href="about.html">About |</a>
+		</nav>
+
+		<footer>
+			<div class ="section"> 
+				©Copyright @ 2019 Irish Art Society
+				<br>
+				Terms of Use & Privacy Policy
+			</div>
+			<div class ="contact">
+				Tel: (353 ) 064 6627334
+				<br>
+				Fax: (353 ) 064 6627350
+				<br>
+			Email: IAsociety@gmail.com</div>
+			<div class="wrapper">
+				<div class="maxi">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="activities.html">Activities</a></li>
+						<li><a href="gallery.html">Gallery</a></li>      
+						<li><a href="upcomingevents.html">Upcoming Events</a></li>
+						<li><a href="about.html">About</a></li> 
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<script src="js/classie.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js'></script>
+		<script src="js/responsiveslides.min.js"></script>
+		<script src="js/mouse.parallax.js"></script>
+		<script src="js/footer.js"></script>
+		<script src="js/pace.js"></script>
+
+
+
+		<script>
+			$(document).ready(function() {
+				const artist = {
+					description: 'Quotes from artists',
+					info: [
+					{quotes: "“Simplicity is the ultimate sophistication.”", name: '― Leonardo da Vinci'},
+					{quotes: "“It is good to love many things, for therein lies the true strength, and whosoever loves much performs much, and can accomplish much, and what is done in love is well done.”", name: '― Vincent Van Gogh'},
+					{quotes: "“A life spent making mistakes is not only more honorable, but more useful than a life spent doing nothing.”", name: '― George Bernard Shaw'},
+					{quotes: "“Art is not what you see, but what you make others see.”", name: '― Edgar Degas'}
+					]
+				}
+
+				let template = Handlebars.compile($('#exercise1').html());
+
+				let output = template(artist);
+
+				$('ol').html(output);    
+			});
+		</script>
+
+		<script>
+	Handlebars.registerHelper("textDec", function(info) {
+		var result = "<ol>" + Handlebars.escapeExpression(info) + "</ol>";
+		return new Handlebars.SafeString(result);
+	});
+</script>
+
+<script>//sidemenu left push 
+var menuLeft = document.getElementById('cbp-spmenu-s1' ),
+showLeftPush = document.getElementById( 'showLeftPush' ),
+body = document.body;
+var menuLeft = document.getElementById('cbp-spmenu-s1' ),
+body = document.body;
+showLeftPush.onclick = function() {
+	classie.toggle( this, 'active' );
+	classie.toggle( body, 'cbp-spmenu-push-toright' );
+	classie.toggle( menuLeft, 'cbp-spmenu-open' );
+	disableOther( 'showLeftPush' );
+};
+
+function disableOther( button ) {
+	if( button !== 'showLeftPush' ) {
+		classie.toggle( showLeftPush, 'disabled' );
+	}
+}
+</script>
+
+<script> // Initializing responsive slides
+$(function() {
+	$(".rslides").responsiveSlides();
+});
+</script>
+
+<script>
+	$(".rslides").responsiveSlides({
+  auto: true,             // Boolean: Animate automatically, true or false
+  speed: 900,             // Integer: Speed of the transition, in milliseconds
+  timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
+  pager: false,           // Boolean: Show pager, true or false
+  nav: false,             // Boolean: Show navigation, true or false
+  random: true,           // Boolean: Randomize the order of the slides, true or false
+  pause: false,           // Boolean: Pause on hover, true or false
+  pauseControls: true,    // Boolean: Pause when hovering controls, true or false
+  prevText: "Previous",   // String: Text for the "previous" button
+  nextText: "Next",       // String: Text for the "next" button
+  maxwidth: "",           // Integer: Max-width of the slideshow, in pixels
+  navContainer: "",       // Selector: Where controls should be appended to, default is after the 'ul'
+  manualControls: "",     // Selector: Declare custom pager navigation
+  namespace: "rslides",   // String: Change the default namespace used
+  before: function(){},   // Function: Before callback
+  after: function(){}     // Function: After callback
+});
+</script>
+
+
+<script> // Opacity for images slider enter + leave
+$(document).ready(function() {
+	$('.rslides img').css('opacity', 1);
+
+	$('.rslides img').on({
+		mouseenter:function() {
+			$(this).css('opacity', 0.9);
+		},
+
+		mouseleave:function() {
+			$(this).css('opacity', 1);
+		}
+	});
+});
+</script>
+
+<script>//Mouse parallax background image move factor 
+$(document).ready(function() {
+	$('#background').mouseParallax({ moveFactor: 1});
+	$('body').height(0);
+});
+</script>
+
+<script>
+	paceOptions = {
+		catchupTime: 100,
+		initialRate: .03,
+		minTime: 250,
+		ghostTime: 100,
+		maxProgressPerFrame: 20,
+		easeFactor: 1.25,
+		startOnPageLoad:true,
+		restartOnPushState:true,
+		restartOnRequestAfter: 500,
+		target:'body',
+		elements: {
+			checkInterval: 100,
+			selectors: ['body']
+		},
+		eventLag: {
+			minSamples: 10,
+			sampleCount: 3,
+			lagThreshold: 3
+		},
+		ajax: {
+			trackMethods: ['GET'],
+			trackWebSockets:true,
+			ignoreURLs: []
+		}
+	}
+</script>
+<script>//Jquery script to detect scroll event and reveal footer when you scroll down the page
+$(window).scroll(function() {
+	$("body").removeClass("scrolling");
+	if($(window).scrollTop() + $(window).height() > ($(document).height() -600) ) {
+  //you are at bottom
+  $("body").addClass("scrolling");
+}});
+</script>
+</body>
+</html>

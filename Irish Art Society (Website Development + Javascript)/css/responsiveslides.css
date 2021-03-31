@@ -1,0 +1,36 @@
+/*! http://responsiveslides.com v1.55 by @viljamis */
+
+.rslides {
+  position: absolute;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  top:19em;
+  left:4em;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 60%;
+   border-radius: 5rem;
+  border:3px inset #B9BFFF;
+  }
+

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+	<link rel="stylesheet" href="css/component.css">
+	<link rel="stylesheet" href="css/mouseparallax.css">
+	<link rel="stylesheet" href="css/pace-theme-flash.css">
+	<link rel="stylesheet" href="css/footerstyle.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<header class = "ui mobile computer sixteen wide column">
+	<br>
+	<nav>
+		<div class="ui mobile computer top attached tabular menu">
+			<h1> Irish Art Society </h1>
+			<ul>
+				<li><i class="fas fa-home"></i> <a class = "item" href="index.html">Home |</a></li>
+				<li><i class="fas fa-info"></i> <a class = "item" href="activities.html">Activities |</a></li>
+				<li><i class="fas fa-folder"></i> <a class = "active item" href="gallery.html">Gallery |</a></li>
+				<li><i class="fas fa-calendar-alt"></i> <a class ="item" href="upcomingevents.html">Upcoming Events |</a></li>
+				<li><i class="fas fa-question"></i> <a class = "item" href="about.html">About |</a></li> 
+				<li><div class="ui white button" id="showLeftPush"><i class="fas fa-bars"></i></button></li></div>
+			</ul>
+		</div>
+	</nav>
+</header>
+
+<body class="cbp-spmenu-push">
+
+	<div id="background" class="mouse-bg"></div>
+
+	<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+
+		<h3>Irish Art Society</h3>
+
+		<a class = "active item" href="index.html">Home |</a>
+		<a class = "item" href="activities.html">Activities |</a>
+		<a class = "item" href="gallery.html">Gallery |</a>
+		<a class ="item" href="upcomingevents.html">Upcoming Events |</a>
+		<a class = "item" href="about.html">About |</a>
+	</nav>
+
+	<footer>
+		<div class ="section"> 
+			©Copyright @ 2019 Irish Art Society
+			<br>
+			Terms of Use & Privacy Policy
+		</div>
+		<div class ="contact">
+			Tel: (353 ) 064 6627334
+			<br>
+			Fax: (353 ) 064 6627350
+			<br>
+		Email: IAsociety@gmail.com</div>
+		<div class="wrapper">
+			<div class="maxi">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="activities.html">Activities</a></li>
+					<li><a href="gallery.html">Gallery</a></li>      
+					<li><a href="upcomingevents.html">Upcoming Events</a></li>
+					<li><a href="about.html">About</a></li> 
+				</ul>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/classie.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="js/mouse.parallax.js"></script>
+	<script src="js/footer.js"></script>
+	<script type="text/javascript" src="js/jgallery.min.js?v=2.2.1"></script>
+	<script src="js/pace.js"></script>
+
+<script>//sidemenu left push 
+var menuLeft = document.getElementById('cbp-spmenu-s1' ),
+showLeftPush = document.getElementById( 'showLeftPush' ),
+body = document.body;
+var menuLeft = document.getElementById('cbp-spmenu-s1' ),
+body = document.body;
+showLeftPush.onclick = function() {
+	classie.toggle( this, 'active' );
+	classie.toggle( body, 'cbp-spmenu-push-toright' );
+	classie.toggle( menuLeft, 'cbp-spmenu-open' );
+	disableOther( 'showLeftPush' );
+};
+
+function disableOther( button ) {
+	if( button !== 'showLeftPush' ) {
+		classie.toggle( showLeftPush, 'disabled' );
+	}
+}
+</script>
+
+<script>//Mouse parallax background image move factor 
+$(document).ready(function() {
+	$('#background').mouseParallax({ moveFactor: 1.5 });
+	$('body').height(0);
+});
+</script>
+
+<script>
+	paceOptions = {
+		catchupTime: 100,
+		initialRate: .03,
+		minTime: 250,
+		ghostTime: 100,
+		maxProgressPerFrame: 20,
+		easeFactor: 1.25,
+		startOnPageLoad:true,
+		restartOnPushState:true,
+		restartOnRequestAfter: 500,
+		target:'body',
+		elements: {
+			checkInterval: 100,
+			selectors: ['body']
+		},
+		eventLag: {
+			minSamples: 10,
+			sampleCount: 3,
+			lagThreshold: 3
+		},
+		ajax: {
+			trackMethods: ['GET'],
+			trackWebSockets:true,
+			ignoreURLs: []
+		}
+	}
+</script>
+
+<script>//detect scroll event and reveal footer when you scroll down the page
+$(window).scroll(function() {
+	$("body").removeClass("scrolling");
+	if($(window).scrollTop() + $(window).height() > ($(document).height() -600) ) {
+  //you are at bottom
+  $("body").addClass("scrolling");
+}});
+</script>
+
+<div id="gallery">
+	<script type="text/javascript">
+		document.querySelector('#gallery').appendChild(JGallery.create([{
+			title: 'Edgar Degas',
+			items: [
+			{
+				url: 'images/degasportrait.jpg',
+				thumbUrl: 'images/degasportrait.jpg',
+				title: 'Portrait of Edgar degas',
+				hash: 'photo-1'
+			},
+			{
+				url: 'images/dancers.jpg',
+				thumbUrl: 'images/dancers.jpg',
+				title: 'The Ballet Class - 1874',
+				hash: 'photo-2'
+			},
+			{
+				url: 'images/opera.jpg',
+				thumbUrl: 'images/opera.jpg',
+				title: 'The Orchestra at the Opera - 1869',
+				hash: 'photo-3'
+			},
+			{
+				url: 'images/cassatt.jpg',
+				thumbUrl: 'images/cassatt.jpg',
+				title: 'Mary Cassatt at the Louvre - 1880',
+				hash: 'photo-4'
+			},
+			{
+				url: 'images/cafe.jpg',
+				thumbUrl: 'images/cafe.jpg',
+				title: 'Café-Concert at Les Ambassadeurs - 1877',
+				hash: 'photo-5'
+			},
+			{
+				url: 'images/stock.jpg',
+				thumbUrl: 'images/stock.jpg',
+				title: 'Portraits at the Stock Exchange - 1879',
+				hash: 'photo-6'
+			},
+			{
+				url: 'images/concorde.jpg',
+				thumbUrl: 'images/concorde.jpg',
+				title: 'Place de la Concorde - 1875',
+				hash: 'photo-6'
+			},
+			{
+				url: 'images/barre.jpg',
+				thumbUrl: 'images/barre.jpg',
+				title: 'Dancers at the Barre - 1905',
+				hash: 'photo-7'
+			},
+			{
+				url: 'images/iron.jpg',
+				thumbUrl: 'images/iron.jpg',
+				title: 'Women Ironing - 1884',
+				hash: 'photo-8'
+			},
+			{
+				url: 'images/band.jpg',
+				thumbUrl: 'images/band.jpg',
+				title: 'Lorenzo Pagans and Auguste De Gas - 1872',
+				hash: 'photo-9'
+			}           
+			]
+		}, {
+			title: 'Claude Monet',
+			items: [
+			{
+				url: 'images/monet.jpg',
+				thumbUrl: 'images/monet.jpg',
+				title: 'Portrait of Claude Monet',
+				hash: 'photo-10'
+			}, 
+			{
+				url: 'images/sun.jpg',
+				thumbUrl: 'images/sun.jpg',
+				title: 'Impression, Sunrise - 1872',
+				hash: 'photo-11'
+			},
+			{
+				url: 'images/garden.jpg',
+				thumbUrl: 'images/garden.jpg',
+				title: 'The Artists Garden at Giverny - 1900',
+				hash: 'photo-12'
+			},
+			{
+				url: 'images/san1.jpg',
+				thumbUrl: 'images/san1.jpg',
+				title: 'San Giorgio Maggiore at Dusk - 1908 - 1912',
+				hash: 'photo-13'
+			},
+			{
+				url: 'images/pour.jpg',
+				thumbUrl: 'images/pour.jpg',
+				title: 'Beach in Pourville - 1882',
+				hash: 'photo-14'
+			},
+			{
+				url: 'images/pond.jpg',
+				thumbUrl: 'images/pond.jpg',
+				title: 'Water Lily Pond - 1900',
+				hash: 'photo-15'
+			},
+			{
+				url: 'images/seine.jpg',
+				thumbUrl: 'images/seine.jpg',
+				title: 'Morning on the Seine near Giverny - 1897',
+				hash: 'photo-16'
+			},
+			{
+				url: 'images/cloud.jpg',
+				thumbUrl: 'images/cloud.jpg',
+				title: 'The Water Lilies — The Clouds - 1903',
+				hash: 'photo-17'
+			},
+			{
+				url: 'images/train.jpg',
+				thumbUrl: 'images/train.jpg',
+				title: 'Arrival of the Normandy Train, Gare Saint-Lazare - 1877',
+				hash: 'photo-18'
+			},
+			{
+				url: 'images/boulevard.jpg',
+				thumbUrl: 'images/boulevard.jpg',
+				title: 'Boulevard des Capucines - 1873',
+				hash: 'photo-19'
+			}      
+			]
+
+		}, { title: 'Pierre Auguste Renoir',
+		items: [
+		{
+			url: 'images/renoir.jpg',
+			thumbUrl: 'images/renoir.jpg',
+			title: 'Portrait of Pierre Auguste Renoir',
+			hash: 'photo-20'
+		},
+		{
+			url: 'images/du.jpg',
+			thumbUrl: 'images/du.jpg',
+			title: 'Bal du moulin de la Galette - 1876',
+			hash: 'photo-21'
+		},  
+		{
+			url: 'images/la.jpg',
+			thumbUrl: 'images/la.jpg',
+			title: 'La Grenouillère - 1869',
+			hash: 'photo-22'
+		},
+		{
+			url: 'images/pont.jpg',
+			thumbUrl: 'images/pont.jpg',
+			title: 'Pont Neuf - 1872',
+			hash: 'photo-23'
+		},
+		{
+			url: 'images/thea.jpg',
+			thumbUrl: 'images/thea.jpg',
+			title: 'At the Theatre - 1876',
+			hash: 'photo-24'
+		},
+		{
+			url: 'images/skiff.jpg',
+			thumbUrl: 'images/skiff.jpg',
+			title: 'The Skiff - 1875',
+			hash: 'photo-25'
+		},
+		{
+			url: 'images/lake.jpg',
+			thumbUrl: 'images/lake.jpg',
+			title: 'Near the Lake - 1880',
+			hash: 'photo-26'
+		},
+		{
+			url: 'images/mongarden.jpg',
+			thumbUrl: 'images/mongarden.jpg',
+			title: 'Monet Painting in his Garden at Argenteuil - 1873',
+			hash: 'photo-27'
+		},
+		{
+			url: 'images/reading.jpg',
+			thumbUrl: 'images/reading.jpg',
+			title: 'Claude Monet Reading - 1872',
+			hash: 'photo-28'
+		},
+		{
+			url: 'images/fred.jpg',
+			thumbUrl: 'images/fred.jpg',
+			title: 'Frédéric Bazille - 1867',
+			hash: 'photo-29'
+		}                           
+		]
+
+	}, { title: 'Vincent Van Gogh',
+	items: [
+	{
+		url: 'images/vanportrait.jpg',
+		thumbUrl: 'images/vanportrait.jpg',
+		title: 'Portrait of Vincent Van Gogh',
+		hash: 'photo-30'
+	},
+	{
+		url: 'images/star.jpg',
+		thumbUrl: 'images/star.jpg',
+		title: 'The Starry Night - 1889',
+		hash: 'photo-31'
+	},
+	{
+		url: 'images/caf.jpg',
+		thumbUrl: 'images/caf.jpg',
+		title: 'Café Terrace at Night - 1888',
+		hash: 'photo-32'
+	},
+	{
+		url: 'images/iri.jpg',
+		thumbUrl: 'images/iri.jpg',
+		title: 'Irises - 1889',
+		hash: 'photo-33'
+	},
+	{
+		url: 'images/rhone.jpg',
+		thumbUrl: 'images/rhone.jpg',
+		title: 'Starry Night Over the Rhône - 1888',
+		hash: 'photo-34'
+	},
+	{
+		url: 'images/night.jpg',
+		thumbUrl: 'images/night.jpg',
+		title: 'The Night Café - 1888',
+		hash: 'photo-35'
+	},
+	{
+		url: 'images/ear.jpg',
+		thumbUrl: 'images/ear.jpg',
+		title: 'Self-Portrait with Bandaged Ear - 1889',
+		hash: 'photo-36'
+	},
+	{
+		url: 'images/post.jpg',
+		thumbUrl: 'images/post.jpg',
+		title: 'Portrait of the Postman Joseph Roulin - 1888',
+		hash: 'photo-37'
+	},
+	{
+		url: 'images/cyp.jpg',
+		thumbUrl: 'images/cyp.jpg',
+		title: 'Road with Cypress and Star - 1890',
+		hash: 'photo-38'
+	},
+	{
+		url: 'images/prison.jpg',
+		thumbUrl: 'images/prison.jpg',
+		title: 'Prisoners Exercising - 1890',
+		hash: 'photo-39'
+	}                                    
+	]
+
+}, { title: 'Carravaggio',
+items: [
+{
+	url: 'images/carra.jpg',
+	thumbUrl: 'images/carra.jpg',
+	title: 'Portrait of Carravaggio',
+	hash: 'photo-40'
+},
+{
+	url: 'images/emmaus.jpg',
+	thumbUrl: 'images/emmaus.jpg',
+	title: 'Supper at Emmaus - 1601',
+	hash: 'photo-41'
+},
+{
+	url: 'images/card.jpg',
+	thumbUrl: 'images/card.jpg',
+	title: 'The Cardsharps - 1594',
+	hash: 'photo-42'
+},
+{
+	url: 'images/paul.jpg',
+	thumbUrl: 'images/paul.jpg',
+	title: 'Conversion of Saint Paul - 1600',
+	hash: 'photo-43'
+},
+{
+	url: 'images/christ.jpg',
+	thumbUrl: 'images/christ.jpg',
+	title: 'The Taking of Chris - 1602',
+	hash: 'photo-44'
+}
+]
+
+}, { title: 'Paul Cezanne',
+items: [
+{
+	url: 'images/cezanne.jpg',
+	thumbUrl: 'images/cezanne.jpg',
+	title: 'Portrait of Paul Cezanne',
+	hash: 'photo-45'
+},
+{
+	url: 'images/mont.jpg',
+	thumbUrl: 'images/mont.jpg',
+	title: 'Mont Sainte-Victoire seen from Bellevue - 1892-1895',
+	hash: 'photo-46'
+},
+{
+	url: 'images/noir.jpg',
+	thumbUrl: 'images/noir.jpg',
+	title: 'Château Noir - 1903-1904',
+	hash: 'photo-47'
+},
+{
+	url: 'images/cardplayers.jpg',
+	thumbUrl: 'images/cardplayers.jpg',
+	title: 'The Card Players - 1890-1895',
+	hash: 'photo-48'
+},
+{
+	url: 'images/gus.jpg',
+	thumbUrl: 'images/gus.jpg',
+	title: 'Portrait of Gustave Geffroy - 1895',
+	hash: 'photo-49'
+}
+]
+}]).getElement());
+</script>
+</div>
+</body>
+</html>

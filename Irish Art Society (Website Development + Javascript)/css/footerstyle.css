@@ -1,0 +1,62 @@
+body {font-family: 'Roboto Condensed'; color: #fff;line-height: 1.7; background: linear-gradient(245deg, rgba(27, 27, 27, 0.04) 0%, rgba(27, 27, 27, 0.04) 93%,rgba(92, 92, 92, 0.04) 93%, rgba(92, 92, 92, 0.04) 100%),linear-gradient(44deg, rgba(11, 11, 11, 0.04) 0%, rgba(11, 11, 11, 0.04) 39%,rgba(186, 186, 186, 0.04) 39%, rgba(186, 186, 186, 0.04) 100%),linear-gradient(134deg, rgba(178, 178, 178, 0.04) 0%, rgba(178, 178, 178, 0.04) 95%,rgba(237, 237, 237, 0.04) 95%, rgba(237, 237, 237, 0.04) 100%),linear-gradient(322deg, rgba(56, 56, 56, 0.04) 0%, rgba(56, 56, 56, 0.04) 58%,rgba(232, 232, 232, 0.04) 58%, rgba(232, 232, 232, 0.04) 100%),linear-gradient(139deg, rgba(51, 51, 51, 0.04) 0%, rgba(51, 51, 51, 0.04) 62%,rgba(35, 35, 35, 0.04) 62%, rgba(35, 35, 35, 0.04) 100%),linear-gradient(252deg, rgba(9, 9, 9, 0.04) 0%, rgba(9, 9, 9, 0.04) 39%,rgba(174, 174, 174, 0.04) 39%, rgba(174, 174, 174, 0.04) 100%),linear-gradient(229deg, rgba(241, 241, 241, 0.04) 0%, rgba(241, 241, 241, 0.04) 2%,rgba(140, 140, 140, 0.04) 2%, rgba(140, 140, 140, 0.04) 100%),linear-gradient(223deg, rgba(82, 82, 82, 0.04) 0%, rgba(82, 82, 82, 0.04) 36%,rgba(229, 229, 229, 0.04) 36%, rgba(229, 229, 229, 0.04) 100%),linear-gradient(90deg, rgb(245, 16, 17),rgb(177, 69, 207));}
+h1 { text-align: center; }
+footer {
+  position: fixed;
+  bottom: 0;
+  transition: all .5s linear;
+  margin-top: 50em;
+  height: 10px;
+  padding: 5px 20px;
+  width:105em;
+}
+footer .mini {
+  height: 40px;
+  overflow: none;
+}
+footer .mini a {
+  display: block;
+  text-align: center;
+}
+footer .maxi {
+  overflow: none;
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+footer ul {
+  flex: 0 0 20;
+  margin: 20px;
+}
+
+.scrolling footer {
+  height: 102px;
+  overflow: hidden;
+}
+
+.scrolling footer .maxi {
+  overflow: visible;
+}
+
+footer {
+  background:  #695f8a;
+  font-size: 1em;
+}
+
+.scrolling footer {
+  background: #574f73;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer a {
+  color: #fff;
+  display: block;
+  padding: .2em;
+  text-decoration: none;
+}

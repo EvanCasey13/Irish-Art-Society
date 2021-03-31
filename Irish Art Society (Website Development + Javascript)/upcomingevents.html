@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html  lang="en" >
+<head>
+    <meta charset="utf-8">
+      <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+  <link rel="stylesheet" href="css/component.css">
+  <link rel="stylesheet" href="css/pace-theme-flash.css">
+  <link rel="stylesheet" href="css/footerstyle.css">
+  <link rel="stylesheet" href="css/style.css">
+
+<header class = "ui mobile computer sixteen wide column">
+  <br>
+  <nav>
+
+    <div class="ui mobile computer top attached tabular menu">
+      <h1> Irish Art Society </h1>
+      <ul>
+        <li><i class="fas fa-home"></i> <a class = " item" href="index.html">Home |</a></li>
+        <li><i class="fas fa-info"></i> <a class = "item" href="activities.html">Activities |</a></li>
+        <li><i class="fas fa-folder"></i> <a class = "item" href="gallery.html">Gallery |</a></li>
+        <li><i class="fas fa-calendar-alt"></i> <a class ="active item" href="upcomingevents.html">Upcoming Events |</a></li>
+        <li><i class="fas fa-question"></i> <a class = "item" href="about.html">About |</a></li> 
+        <li><div class="ui white button" id="showLeftPush"><i class="fas fa-bars"></i></button></li></div>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<body class="cbp-spmenu-push">
+  <hr>
+  <hr>
+  <main>
+    <h3> Here you can see a list of our Upcoming Events </h3>
+    <hr>
+
+</head>
+<body>
+<div class="ui container">
+<script id="emp-template" type="text/x-handlebars-template">
+<table class="ui striped selectable table" >
+<thead>
+<tr>
+<th>Event name</th>
+<th>Event location</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+{{#each this}}
+<tr>
+<td> {{italic eventname}}</td>
+<td> {{eventlocation}} </td>
+<td> {{date}}</td>
+</tr>
+{{/each}}
+</tbody>
+</table>
+</script>
+
+<div id = "content-placeholder"></div>
+
+<div class="ui modal empModal">
+<i class="close icon"></i>
+<form name = 'newempform' id = "newempform" class = "ui form" >
+<div class="inline field">
+<label for = "eventname" class="two wide field">Event name</label>
+<input type = "text" class="eight wide field"  name="eventname" id ="eventname">
+</div>
+
+<div class="inline field">
+<label for = "eventlocation" class="two wide field">Event location</label>
+<input type = "text" name="eventlocation" id="eventlocation" class="eight wide field">
+</div>
+
+<div class="inline field">
+<label for = "date" class="two wide field">Date</label>
+<input type = "text" name="date" id="date" class="eight wide field">
+</div>
+
+<input type="submit" id="thesubmit" class="ui primary button" value="Add Event">
+</form>
+</div>
+</div>
+
+  
+<form action="process.html" method="get" name="signup" id="signup" role="form" class = "ui form" >
+    <div class="ui four wide column">
+      <p> Application form for those who wish to attend certain trips</p>
+      <div class = "inline field">
+        <label for="name" class="three wide field"><div class = ""><p> Contact Name</p></div></label>
+        <input type="text" class="eight wide field" name="name"  id="name" data-h5-errorid="invalid-name"
+        required pattern = "[A-Z][a-z]+( [A-Z][a-z]+)?" autofocus
+        title="Please enter a name (Including Surname) with First Letter capitalised">
+        <div id="invalid-name" class="ui-state-error"></div>
+      </div>
+
+      <div class = "inline field">
+        <label for="telephone" class="three wide field"><p>Telephone Number</p></label>
+        <input class="eight wide field" type="tel" name="telephone" id="telephone"  data-h5-errorid="invalid-number" required pattern = "^(\(\d{3}\)|\d{3})-?\d{6,}$"
+        title = "Please enter a nine digit phone number">
+        <div id ="invalid-number" class="ui-state-error"></div>
+      </div>
+
+      <div class = "inline field">
+        <label for="email" class="three wide field"><p>Email Address</p></label>
+        <input type="email" name="email" id="email" class="eight wide field" data-h5-errorid="invalid-email" required  pattern = "^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$"
+        title="Please enter a valid email">
+        <div id ="invalid-email" class="ui-state-error"></div>
+      </div>
+
+      <div class = "inline field">
+        <label for="people" class="three wide field"><p>Cost per person per trip (Click me)</p></label>
+        <input class="eight wide field" value = "80" type="number" name="people" id="people" readonly="">
+        <div id ="invalid-people" class="ui-state-error"></div>
+      </div>
+
+      <div class ="inline field">
+        <label for = "myBrowser" class ="three wide field"><p>Choose a Payment Method :</p></label>
+        <input type = "text" list="browsers" name="myBrowser" id = "myBrowser" class ="eight wide field">
+        <datalist id="browsers">
+          <option value="Visa debit"></option>
+          <option value="Visa credit"></option>
+          <option value="Paypal"></option>
+          <option value="Cash"></option>
+        </div>
+      </datalist>
+
+      <div class = "inline field">
+        <label for="region" class="three wide field"><p>What trips do you wish to attend?</p></label>
+        <select name="region" id="region" class="eight wide field" multiple="">
+          <option value="sw">The National Gallery of Ireland</option>
+          <option value="se">2019 People's Art Exhibitions</option>
+          <option value="se">Walker Art Gallery</option>
+          <option value="se">Royal Academy of Arts</option>
+          <option value="se">The Louvre</option>
+          <option value="se">Alte Nationalgalerie</option>
+          <option value="se">Academy of Florence Art Gallery</option>
+          <option value="se">Academy Gallery in Venice</option>
+        </select>
+      </div>
+
+      <div class ="inline field">
+        <label for = "runtotal" class="ui four wide column"><p>Total Cost</p></label><input type = "text" id = "runtotal" size="4">
+      </div>
+
+      <div class ="ui four wide column">    
+        <button class="ui orange button" type="submit">Apply </button>
+        <button class="ui orange button" type="reset">Clear</button>
+        <button class="ui orange button" id="btncall">Add Event</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<div id="background" class="mouse-bg"></div>
+
+<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+
+  <h3>Irish Art Society</h3>
+
+  <a class = "active item" href="index.html">Home |</a>
+  <a class = "item" href="activities.html">Activities |</a>
+  <a class = "item" href="gallery.html">Gallery |</a>
+  <a class ="item" href="upcomingevents.html">Upcoming Events |</a>
+  <a class = "item" href="about.html">About |</a>
+</nav>
+
+<footer>
+  <div class ="section"> 
+    ©Copyright @ 2019 Irish Art Society
+    <br>
+    Terms of Use & Privacy Policy
+  </div>
+  <div class ="contact">
+    Tel: (353 ) 064 6627334
+    <br>
+    Fax: (353 ) 064 6627350
+    <br>
+  Email: IAsociety@gmail.com</div>
+  <div class="wrapper">
+    <div class="maxi">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="gallery.html">Gallery</a></li>      
+        <li><a href="upcomingevents.html">Upcoming Events</a></li>
+        <li><a href="about.html">About</a></li> 
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="js/classie.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js'></script>
+<script  src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.js"></script>
+<script src="js/emp.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/form.js"></script>
+<script src="js/pace.js"></script>
+
+<script>
+Handlebars.registerHelper("italic", function(text) {
+  var result = "<em>" + Handlebars.escapeExpression(text) + "</em>";
+  return new Handlebars.SafeString(result);
+});
+
+</script>
+
+
+<script>//sidemenu left push 
+var menuLeft = document.getElementById('cbp-spmenu-s1' ),
+showLeftPush = document.getElementById( 'showLeftPush' ),
+body = document.body;
+var menuLeft = document.getElementById('cbp-spmenu-s1' ),
+body = document.body;
+showLeftPush.onclick = function() {
+  classie.toggle( this, 'active' );
+  classie.toggle( body, 'cbp-spmenu-push-toright' );
+  classie.toggle( menuLeft, 'cbp-spmenu-open' );
+  disableOther( 'showLeftPush' );
+};
+
+function disableOther( button ) {
+  if( button !== 'showLeftPush' ) {
+    classie.toggle( showLeftPush, 'disabled' );
+  }
+}
+</script>
+
+
+
+<script>
+  paceOptions = {
+    catchupTime: 100,
+    initialRate: .03,
+    minTime: 250,
+    ghostTime: 100,
+    maxProgressPerFrame: 20,
+    easeFactor: 1.25,
+    startOnPageLoad:true,
+    restartOnPushState:true,
+    restartOnRequestAfter: 500,
+    target:'body',
+    elements: {
+      checkInterval: 100,
+      selectors: ['body']
+    },
+    eventLag: {
+      minSamples: 10,
+      sampleCount: 3,
+      lagThreshold: 3
+    },
+    ajax: {
+      trackMethods: ['GET'],
+      trackWebSockets:true,
+      ignoreURLs: []
+    }
+  }
+</script>
+
+<script>//Jquery script to detect scroll event and reveal footer when you scroll down the page
+$(window).scroll(function() {
+  $("body").removeClass("scrolling");
+  if($(window).scrollTop() + $(window).height() > ($(document).height() -600) ) {
+  //you are at bottom
+  $("body").addClass("scrolling");
+}});
+</script>
+
+<script>
+  $(document).ready(function () {
+    $('form').h5Validate();
+  });
+</script>
+
+<script> 
+  $(document).ready(function () {
+    $('form').h5Validate({errorClass:'validationError' });
+  });
+</script>
+
+</body>
+</html>

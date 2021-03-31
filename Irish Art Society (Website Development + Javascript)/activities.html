@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+	<link rel="stylesheet" href="css/component.css">
+	<link rel="stylesheet" href="css/mouseparallax.css">
+	<link rel="stylesheet" href="css/pace-theme-flash.css">
+	<link rel="stylesheet" href="css/footerstyle.css">
+	<link rel="stylesheet" href="css/jquery-social-share-bar.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<header class = "ui mobile computer sixteen wide column">
+	<br>
+	<nav>
+		<div class="ui mobile computer top attached tabular menu">
+			<h1> Irish Art Society </h1>
+			<ul>
+				<li><i class="fas fa-home"></i> <a class = "item" href="index.html">Home |</a></li>
+				<li><i class="fas fa-info"></i> <a class = "active item" href="activities.html">Activities |</a></li>
+				<li><i class="fas fa-folder"></i> <a class = "item" href="gallery.html">Gallery |</a></li>
+				<li><i class="fas fa-calendar-alt"></i> <a class ="item" href="upcomingevents.html">Upcoming Events |</a></li>
+				<li><i class="fas fa-question"></i> <a class = "item" href="about.html">About |</a></li> 
+				<li><div class="ui white button" id="showLeftPush"><i class="fas fa-bars"></i></button></li></div>
+			</ul>
+		</div>
+	</nav>
+</header>
+
+<body class="cbp-spmenu-push">
+	<main>
+		<div class ="ui grid container">
+			<div class ="ui mobile computer sixteen centered wide column">
+				<h3>Below are a list of the Activities that take place at our Organisation on a day-to-day and biweekly basis</h3>
+			</div>
+		</div>
+		<hr>
+		<h4>Activities : </h4>
+		<div class ="ui mobile computer sixteen wide column">
+			<ul class ="col">
+				<li> Lecture & Study of Various Paintings held every <span class ="days">Monday</span> at 5:30pm</li>
+				<br>
+				<li> Open library containing various books with excellent information on many eras of Painting for members</li>
+				<br>
+				<li> Every <span class = "days">Wednesday </span>the art society becomes a place for members to hone their skills, develop their techniques and collaborate with other Artists</li>
+				<br>
+				<li> Annual Arts Festival held twice a year at Christmas and Summer</li>
+				<br>
+				<li> Every <span class = "days">Saturday</span> a meeting is held at 7:00pm to discuss any ideas & problems that members or staff may have</li>
+				<br>
+				<li>Our art club meets at least once a month, with more meetings if a project requires it.</li>
+			</ul>
+		</div>
+		<br>
+		<br>
+		<h4> Why you should become involved in Our Activities : </h4>
+	</div>
+	<ol class ="col">
+		<div class = "ui container">
+			<div class = "ui mobile computer sixteen wide column">
+				<script id="maincontent" type="text/x-handlebars-template">
+					{{#each this}}
+					<li>
+						{{textDec paragraphs}}
+					</li>
+					<br>
+					{{/each}}
+			</script>
+		</div>
+	</div>
+	</ol>
+
+	<div id="share-bar">
+		
+	</div>
+
+	<div id="background" class="mouse-bg"></div>
+
+	<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+
+		<h3>Irish Art Society</h3>
+
+		<a class = "active item" href="index.html">Home |</a>
+		<a class = "item" href="activities.html">Activities |</a>
+		<a class = "item" href="gallery.html">Gallery |</a>
+		<a class ="item" href="upcomingevents.html">Upcoming Events |</a>
+		<a class = "item" href="about.html">About |</a>
+	</nav>
+
+	<footer>
+		<div class ="section"> 
+			©Copyright @ 2019 Irish Art Society
+			<br>
+			Terms of Use & Privacy Policy
+		</div>
+		<div class ="contact">
+			Tel: (353 ) 064 6627334
+			<br>
+			Fax: (353 ) 064 6627350
+			<br>
+		Email: IAsociety@gmail.com</div>
+		<div class="wrapper">
+			<div class="maxi">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="activities.html">Activities</a></li>
+					<li><a href="gallery.html">Gallery</a></li>      
+					<li><a href="upcomingevents.html">Upcoming Events</a></li>
+					<li><a href="about.html">About</a></li> 
+				</ul>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/classie.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js'></script>
+	<script src="js/mouse.parallax.js"></script>
+	<script src="js/footer.js"></script>
+	<script src="js/jquery-social-share-bar.js"></script>
+	<script src="js/pace.js"></script>
+
+	<script>
+		$(document).ready(function() {
+
+			const content = [
+			{
+				"paragraphs":"Art influences society by changing opinions, instilling values and translating experiences across space and time. Research has shown art affects the fundamental sense of self. Painting, sculpture, music, literature and the other arts are often considered to be the repository of a society's collective memory."
+
+			},
+			{
+				"paragraphs":"The arts bring us joy, help us express our values, and build bridges between cultures. The arts are also a fundamental component of a healthy community—strengthening them socially, educationally, and economically—benefits that persist even in difficult social and economic times."
+
+			},
+			{
+				"paragraphs":"Art expresses the non-verbal. And despite our heavy emphasis on the verbal and written, there’s a vast realm of human experience that can only be understood and supported without words."
+
+			}
+			]
+
+			let template = Handlebars.compile($('#maincontent').html());
+
+			let output = template(content);
+
+			$('ol').html(output);  
+		});
+	</script>
+
+	<script>
+	Handlebars.registerHelper("textDec", function(paragraphs) {
+		var result = "<i>" + Handlebars.escapeExpression(paragraphs) + "</i>";
+		return new Handlebars.SafeString(result);
+	});
+</script>
+
+<script>//sidemenu left push 
+var menuLeft = document.getElementById('cbp-spmenu-s1' ),
+showLeftPush = document.getElementById( 'showLeftPush' ),
+body = document.body;
+var menuLeft = document.getElementById('cbp-spmenu-s1' ),
+body = document.body;
+showLeftPush.onclick = function() {
+	classie.toggle( this, 'active' );
+	classie.toggle( body, 'cbp-spmenu-push-toright' );
+	classie.toggle( menuLeft, 'cbp-spmenu-open' );
+	disableOther( 'showLeftPush' );
+};
+
+function disableOther( button ) {
+	if( button !== 'showLeftPush' ) {
+		classie.toggle( showLeftPush, 'disabled' );
+	}
+}
+</script>
+
+<script>//Mouse parallax background image move factor 
+$(document).ready(function() {
+	$('#background').mouseParallax({ moveFactor: 1.5 });
+	$('body').height(0);
+});
+</script>
+
+<script>
+	paceOptions = {
+		catchupTime: 100,
+		initialRate: .03,
+		minTime: 250,
+		ghostTime: 100,
+		maxProgressPerFrame: 20,
+		easeFactor: 1.25,
+		startOnPageLoad:true,
+		restartOnPushState:true,
+		restartOnRequestAfter: 500,
+		target:'body',
+		elements: {
+			checkInterval: 100,
+			selectors: ['body']
+		},
+		eventLag: {
+			minSamples: 10,
+			sampleCount: 3,
+			lagThreshold: 3
+		},
+		ajax: {
+			trackMethods: ['GET'],
+			trackWebSockets:true,
+			ignoreURLs: []
+		}
+	}
+</script>
+
+<script>//Jquery script to detect scroll event and reveal footer when you scroll down the page
+$(window).scroll(function() {
+	$("body").removeClass("scrolling");
+	if($(window).scrollTop() + $(window).height() > ($(document).height() -600) ) {
+  //you are at bottom
+  $("body").addClass("scrolling");
+}});
+</script>
+
+
+<script>
+	$('#share-bar').share({
+  // page title
+  pageTitle:'',
+  // page url
+  pageUrl: window.location.href,
+  // page description
+  pageDesc:'',
+  // or 'right'
+  position:'left',
+  // or 'square'
+  theme:'circle',
+  // enable/disable animation
+  animate:true,
+  // popup width
+  popupWidth: 640,
+  // popup height
+  popupHeight: 528,
+  // an array of social networking services
+  channels: ['twitter'],
+  // trigger class
+  itemTriggerClass:'js-share'
+});
+</script>
+
+</body>
+</html>
